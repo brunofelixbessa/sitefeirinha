@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="favicon.png">
+  <title>Feirinha da Concórdia</title>
+
+  <!-- Firebase -->
+  <script defer src="/__/firebase/8.2.2/firebase-app.js"></script>
+
+  <script defer src="/__/firebase/8.2.2/firebase-auth.js"></script>
+  <script defer src="/__/firebase/8.2.2/firebase-firestore.js"></script>
+  <script defer src="/__/firebase/8.2.2/firebase-functions.js"></script>
+  <script defer src="/__/firebase/8.2.2/firebase-messaging.js"></script>
+  <script defer src="/__/firebase/8.2.2/firebase-storage.js"></script>
+  <script defer src="/__/firebase/8.2.2/firebase-analytics.js"></script>
+  <script defer src="/__/firebase/init.js"></script>
+
+  <!-- Carrossel -->
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <!-- Pessoal -->
+  <link href="index.css" rel="stylesheet">
+  <link href="print.css" rel="stylesheet" media="print">
+
+</head>
+
+<body class="" onload="readData()">
+
+  <header id="header-id" class="header">
+    <div class="menu1">
+      <div class="menu-toggle">
+        <div class="um"></div>
+        <div class="dois"></div>
+        <div class="tres"></div>
+      </div>
+      <img src="arquivos/logo-feirinha.png">
+
+      <div class="container">
+
+
+        <div>
+          <span class="cor-azul1 font-2 ">Horário de funcionamento</span><br />
+          <span>segunda a sábado das 06h00 às 16h00</span>
+        </div>
+        <div>
+          <span>Rua do Gasômetro, n. 873<br />
+            Brás - São Paulo - SP</span><br />
+          <a class="cor-azul1 font-2 " href="/">veja como chegar</a>
+        </div>
+        <div class="redes">
+          <a title="Facebook" href="http://www.facebook.com/FeirinhaDaConcordia" target="_blank" class="social">
+            <img src="arquivos/simbolo-de-aplicativo-do-facebook.svg" alt="facebook" class="social-ico">
+          </a>
+          <a title="Googe Plus" href="http://www.facebook.com/FeirinhaDaConcordia" target="_blank" class="social">
+            <img src="arquivos/simbolo-de-aplicativo-do-facebook.svg" alt="facebook" class="social-ico">
+          </a>
+          <a title="Instagram" href="http://www.facebook.com/FeirinhaDaConcordia" target="_blank" class="social">
+            <img src="arquivos/simbolo-de-aplicativo-do-facebook.svg" alt="facebook" class="social-ico">
+          </a>
+        </div>
+
+      </div>
+    </div>
+    <div class="menu2 cor-fundo-azul2">
+      <a class="font-2" href="/">a Feirinha</a>
+      <a class="font-2" href="/">aqui tem</a>
+      <a class="font-2" href="/">onde é</a>
+      <a class="font-2" href="/">fique ligado</a>
+      <a class="font-2" href="/">diz ai</a>
+      <a class="font-2" href="/">faça parte</a>
+    </div>
+
+  </header>
+
+  <section id="carrossel" class="carrossel">
+    <picture class="image" alt="imagem principal topo">
+      <source media="(min-width: 768px)" srcset="arquivos/AF_slider_atendimento_whatsapp_2.jpg">
+      <source media="(min-width: 320px)" srcset="arquivos/AF_slider_atendimento_whatsapp_2_p.jpg">
+      <img src="arquivos/AF_slider_atendimento_whatsapp_2.jpg">
+    </picture>
+
+  </section>
+
+  <section class="flex conheca">
+    <div>
+      <span style="font-size: 5rem; margin-bottom: 20px;" class="font-2 cor-azul1">Conheça a Feirinha da
+        Concórdia</span><br /><br />
+      <div class="diferenciais">
+        <a href="/">diferenciais |</a>
+        <a href="/">serviços |</a>
+        <a href="/">depóimentos</a>
+      </div>
+    </div>
+
+    <div class="font-just conheca-text">
+      Tudo o que você deseja está aqui, na melhor feirinha do Brás. A Feirinha da Concórdia é uma ótima opção para você
+      aproveitar o que há de melhor no mercado da moda, em um ambiente agradável, inovador, organizado, espaçoso e de
+      fácil
+      acesso, com serviços que fazem a diferença para o seu conforto. Aqui você encontra uma imensa diversidade de
+      produtos
+      com preços tão incríveis que você vai amar. Com tantas variedades e ofertas você vai sair de lá com muitas sacolas
+      ; )
+      <a href="/">Veja o que nossos cliente acham da Feirinha da Concórdia.</a><br />
+
+      E pra chegar é muito fácil… a Feirinha da Concórdia está localizada no coração do Brás, o maior centro de moda do
+      país,
+      junto ao Largo da Concórdia, pertinho da estação Brás e e fica aberta em um horário alternativo, das 6h às 14h.
+
+      Moda, variedade, conforto e preço baixo, tudo em um só lugar! Venha para a melhor feirinha do Brás, seja bem-vindo
+      e
+      boas compras!
+    </div>
+  </section>
+
+  <section class="melhor-do-bras">
+    <img src="arquivos/socalas-abertura1.jpg">
+    <div class="cor-fundo-azul2 font-2" style="font-size: 3rem; color: #FFF; text-align: center; padding: 30px;">
+      Veja porque a Feirinha da Concórdia é a melhor feirinha do Brás
+  </section>
+
+  <section class="card-3 sacola-container">
+    <div class="sacola">
+      <div>
+        <img src="arquivos/sacola-laranja.png">
+      </div>
+      <div style="max-width: 70%; margin-left: 10px;">
+        <spam style="font-size: 2.5rem;" class="font-2 cor-azul1">Grande variedade e os melhores preços</spam><br />
+        <spam>Mais de 1000 boxes com milhares de ofertas para você</spam>
+      </div>
+    </div>
+    <div class="sacola">
+      <div>
+        <img src="arquivos/sacola-verde.png">
+      </div>
+      <div style="max-width: 70%; margin-left: 10px;">
+        <spam style="font-size: 2.5rem;" class="font-2 cor-azul1">Diversos serviços para a sua comodidade</spam><br />
+        <spam>Provadores, Wi-Fi, sanitários e fraldário para você usar sem pagar nada</spam>
+      </div>
+    </div>
+    <div class="sacola">
+      <div>
+        <img src="arquivos/sacola-amarela.png">
+      </div>
+      <div style="max-width: 70%; margin-left: 10px;">
+        <spam style="font-size: 2.5rem;" class="font-2 cor-azul1">Localização privilegiada</spam><br />
+        <spam>Na frente da estação de trem e metrô Brás e junto ao largo da Concórdia</spam>
+      </div>
+    </div>
+  </section>
+
+  <section class="cosumidora">
+    <div class="font-2 cor-azul1">
+      <span style="font-size: 4rem;">Muito mais conforto para suas compras!</span><br />
+      <span style="font-size: 2rem;">Conheça os serviços e comodidades da Feirinha da Concórdia</span>
+    </div>
+    <img src="arquivos/consumidora-feirinha.jpg">
+  </section>
+
+  <section class="flex">
+    <div class="card-centro cor-fundo-laranja">
+      <img src="arquivos/area-alimentacao.svg" alt="alimentação">
+      <h2>Área de Alimentação</h2>
+      <p>
+        Aqui você encontra ótimas opções pra matar a fome. São diversos restaurantes à sua disposição, tudo pra você ter
+        mais
+        qualidade, conforto e praticidade durante suas compras.
+      </p>
+    </div>
+    <div class="card-centro cor-fundo-verde">
+      <img src="arquivos/icone-cabide.svg" alt="Provadores">
+      <h2>Provadores</h2>
+      <p>
+        Pra garantir a sua comodidade, a Feirinha da Concórdia conta com vários provadores, oferecendo, assim, mais
+        tranquilidade pra escolher o que realmente combina com você e evitar que você perca a viagem, tendo que voltar
+        para
+        fazer trocas.
+      </p>
+    </div>
+    <div class="card-centro cor-fundo-amarelo">
+      <img src="arquivos/icone-sanitario.svg" alt="alimentação">
+      <h2>Sanitários gratuitos</h2>
+      <p>
+        Sanitários estrategicamente localizados oferecem bem-estar durante sua permanência na Feirinha da Concórdia,
+        como o
+        “sanitário família” e sanitários com acessibilidade pra pessoas com deficiência física. E sem pagar nada!
+      </p>
+    </div>
+    <div class="card-centro  cor-fundo-verde">
+      <img src="arquivos/icone-chupeta.svg" alt="alimentação">
+      <h2>Fradário e Lactário</h2>
+      <p>
+        Aqui você encontra ótimas opções pra matar a fome. São diversos restaurantes à sua disposição, tudo pra você ter
+        mais
+        qualidade, conforto e praticidade durante suas compras.
+      </p>
+    </div>
+    <div class="card-centro cor-fundo-amarelo">
+      <img src="arquivos/icone-carro.svg" alt="Provadores">
+      <h2>Estacionamento</h2>
+      <p>
+        Pra garantir a sua comodidade, a Feirinha da Concórdia conta com vários provadores, oferecendo, assim, mais
+        tranquilidade pra escolher o que realmente combina com você e evitar que você perca a viagem, tendo que voltar
+        para
+        fazer trocas.
+      </p>
+    </div>
+    <div class="card-centro cor-fundo-laranja">
+      <img src="arquivos/icone-dinheiro.svg" alt="alimentação">
+      <h2>Caixas eletrônicos</h2>
+      <p>
+        Sanitários estrategicamente localizados oferecem bem-estar durante sua permanência na Feirinha da Concórdia,
+        como o
+        “sanitário família” e sanitários com acessibilidade pra pessoas com deficiência física. E sem pagar nada!
+      </p>
+    </div>
+  </section>
+
+  <section class="flex boca-do-povo">
+    <div class="boca-do-povo1">
+      <spam class="font-2 cor-azul1" style="font-size: 1.3rem;">A Feirinha da boca do povo</spam>
+      <div class="flex">
+        <div class="cards-povo">
+          “O melhor lugar pra se fazer compras e economizar. Gosto muito de ir à Feirinha. Gente, não deixe pra amanhã
+          aquela
+          roupa que você pode comprar hoje. Pode ser que amanhã não tenha mais o seu número.” <br /><br />
+          Téia Venancio
+        </div>
+        <div class="cards-povo">“Dá para andar na moda com e pouca grana. Quem ainda não conhece, vá o mais rápido
+          conhecer a Feirinha. Vocês vão
+          adorar”.<br /><br />
+          Ivanilson Cruz</div>
+        <div class="cards-povo">“Amo essa Feirinha. Tudo que procuro tem lá, além dos preços serem ótimos!”<br /><br />
+          Cintia Carvalho</div>
+        <div class="cards-povo">“Para mim é o paraíso das compras ! Super amooooooooooo … lugar seguro e com roupa pra
+          família toda!”<br /><br />
+          Amanda Lefe</div>
+        <div class="cards-povo">“Adoro essa feirinha… tem tudo em um só lugar, além dos excelentes preços e produtos,
+          tem sempre muitas novidades.
+          Recomendo pra quem não conhece.”<br /><br />
+          Karina Medeiros</div>
+        <div class="cards-povo">“Um excelente e maravilhoso lugar para se comprar. Ótimos preços e qualidade de
+          shopping!”<br /><br />
+          Valéria Aviamentos</div>
+      </div>
+    </div>
+    <div class="boca-do-povo2">
+      <img src="arquivos/consumidora-feirinha-da-concordia.jpg">
+    </div>
+
+  </section>
+
+  <section class=" cor-fundo-verde aqui-tem">
+    <span class="font-2 ">Aqui tem</span>
+  </section>
+
+  <span class="font-2 cor-azul1" style="font-size: 1.3rem; padding: 40px;">Aqui você encontra os melhores
+    produtos</span>
+
+  <section class="flex-100 segmentos">
+    <div>
+      <img src="arquivos/icone-vestido.svg">
+      <spam class="font-2">moda feminina</spam>
+    </div>
+    <div>
+      <img src="arquivos/icone-camisa.svg">
+      <spam class="font-2">moda masculina</spam>
+    </div>
+    <div>
+      <img src="arquivos/icone-bebe.svg">
+      <spam class="font-2">moda feminina</spam>
+    </div>
+    <div>
+      <img src="arquivos/icone-mesa.svg">
+      <spam class="font-2">moda feminina</spam>
+    </div>
+    <div>
+      <img src="arquivos/icone-relogio.svg">
+      <spam class="font-2">moda feminina</spam>
+    </div>
+    <div>
+      <img src="arquivos/icone-mais.svg">
+      <spam class="font-2">moda feminina</spam>
+    </div>
+  </section>
+
+  <section class="fotos-lista">
+    <div><img src="arquivos/imagens/feirinha-concordia-001.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-002.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-003.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-004.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-005.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-006.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-007.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-008.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-010.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-011.jpg"></div>
+    <div><img src="arquivos/imagens/feirinha-concordia-012.jpg"></div>
+  </section>
+
+  <section class="flex aviso-laranja">
+    <div>A Feirinha da Concórdia está sempre atualizada com os lançamentos e tendências pra qualquer estação do ano e
+      pra
+      qualquer ocasião, com os melhores preços da região. Aqui você encontra muitas opções de estilo em moda feminina,
+      masculina, infantil e até moda casa, seja pra comprar algo incrível para você, pra presentear alguém ou pra
+      revender e
+      ganhar um dinheirinho extra.</div>
+    <div>Aqui você também pode usar e abusar dos acessórios que fazem toda a diferença na hora de montar seu estilo,
+      como cintos,
+      bolsas, calçados, relógios e óculos, pra você criar looks cheios de personalidade. Vale tudo na hora de usar a
+      criatividade e a Feirinha da Concórdia é lugar certo para você. A maior variedade de produtos pra todos os gostos
+      você
+      encontra aqui!</div>
+  </section>
+
+  <section id="onde-e" class="aqui-tem" style="background-color: #97c4df;">
+    <span class="font-2 ">Onde é</span>
+  </section>
+
+  <section id="como-chegar-container">
+    <div class="card-3 como-chegar">
+      <div style="color: #97c4df; text-align: justify; font-size: 1.2rem;">
+        <strong>A Feirinha da Concórdia</strong> fica no Brás, o coração da cidade de São Paulo, em um local de fácil
+        acesso, ao lado do
+        Estação Brás da CPTM e do Largo da Concórdia, pertinho da Avenida Rangel Pestana.
+      </div>
+
+      <div>
+        <div class="chegar-flex">
+          <img src="arquivos/localizacao-feirinha.svg">
+          <div>
+            <spam style="font-size: 1.3rem;" class="font-2 cor-azul1">Endereço</spam><br />
+            <spam>Rua do Gasômetro, n. 873<br />
+              Brás – São Paulo – SP</spam>
+          </div>
+        </div><br /><br />
+        <div class="chegar-flex">
+          <img src="arquivos/horario-feirinha.svg">
+          <div>
+            <spam style="font-size: 1.3rem;" class="font-2 cor-azul1">Horário de funcionamento</spam><br />
+            <spam>segunda a sábado das 06h00 às 16h00</spam>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <img style="max-width: 100%;" src="arquivos/sacolas-ok.jpg">
+      </div>
+    </div>
+    <div style="font-size: 3rem;padding: 20px;">
+      <sapm class="font-2 cor-azul1">Como chegar na Feirinha da Concórdia</sapm>
+    </div>
+    <div class="flex como-chegar-cinsa">
+      <div>
+        <div class="como-chegar-botoes">
+          <button class="tablink" onclick="openPage('onibus', this, '#2e88be')">Ônibus</button>
+          <button class="tablink" onclick="openPage('cptm', this, '#2e88be')" id="defaultOpen">Metrô / CPTM</button>
+          <button class="tablink" onclick="openPage('carro', this, '#2e88be')">Carro</button>
+        </div>
+        <div id="onibus" class="tabcontent">
+          <strong>Zona Leste: no Terminal Vila Carrão</strong> na Avenida Dezenove de Janeiro, 783, embarque no ônibus
+          <strong>2290-10 Terminal
+            Parque Dom
+            Pedro II</strong> e desembarque na rua do Gasômetro na altura do número 599. Caminhe até o número
+          873.<br /><br />
+
+          <strong>Zona Norte:</strong> na avenida Cruzeiro do Sul, altura do número 835, embarque no ônibus
+          <strong>174M-10 Museu do Ipiranga</strong> e
+          desembarque
+          no Largo da Concórdia, 125, próximo à rua da Juta e ao Viaduto do Gasômetro. Caminhe até a rua do Gasômetro,
+          873.<br /><br />
+
+          <strong>Zona Oeste:</strong> no Terminal Lapa, plataforma 1, 50 Parada, embarque no ônibus <strong>8000-10
+            Praça Ramos de Azevedo</strong> e
+          desembarque
+          na rua Coronel Xavier de Toledo, 220. Caminhe até o número 63 e embarque no ônibus <strong>702C-10 Metrô
+            Belém.</strong>
+          Desembarque na
+          avenida Rangel Pestana, 1526. Caminhe até a rua do Gasômetro, 873.<br /><br />
+
+          <strong>Zona Sul:</strong> no <strong>Terminal João Dias,</strong> embarque no ônibus <strong>6403-10 Terminal
+            Parque Dom Pedro II</strong> e desembarque no
+          Terminal
+          <strong>Parque Dom Pedro II, Plataforma I.</strong> Direcione-se até a <strong>Plataforma 6</strong> dentro do
+          próprio Terminal, embarque no
+          ônibus
+          <strong>2290-10 Terminal São Mateus</strong> e desembarque na avenida Rangel Pestana no número 1526. Caminhe
+          até a rua do
+          Gasômetro, 873.<br /><br />
+
+          <a class="font-2 cor-azul1"
+            href="https://www.google.com.br/maps/place/Rua+do+Gas%C3%B4metro,+873+-+Br%C3%A1s,+S%C3%A3o+Paulo+-+SP,+03004-001/@-23.5428572,-46.6200878,17z/data=!3m1!4b1!4m5!3m4!1s0x94ce58e2069e7ccd:0xb33aba8e4d687797!8m2!3d-23.5431239!4d-46.6182881">Veja
+            a rota no Google</a><br /><br />
+        </div>
+        <div id="cptm" class="tabcontent">
+          <strong>ESTAÇÃO BRÁS – LINHA VERMELHA</strong> <br /><br />
+
+          Caso você acesse o metrô através da <stron>Rodoviária do Tietê</strong> (linha azul), pegue o trem sentido
+            Jabaquara e
+            desembarque na
+            <strong>Estação Sé.</strong> Faça a baldeação, acesse a linha vermelha e pegue o trem sentido
+            Corinthians-Itaquera. Desembarque
+            na
+            <strong>Estação Brás.</strong> Vá em direção da estação da CPTM, passe por baixo do viaduto Maestro Alberto
+            Marino e você já
+            chegará no
+            acesso à Feirinha da Concórdia, que fica bem ao lado da linha do trem.<br /><br />
+
+            <strong>VIA CPTM: ESTAÇÃO BRÁS</strong><br /><br />
+
+            A Feirinha da Concórdia está bem pertinho da <strong>estação Brás da CPTM, na Linha 10/ Turquesa.</strong>
+            Para
+            chegar é muito
+            simples e
+            a estação tem a facilidade de transferência gratuita com o metrô. Você também pode acessá-la através de
+            integrações com
+            a <strong>Linha Coral</strong> (pra quem vai sentido Luz) e com a <strong>Linha Safira</strong> (pra quem
+            sai de Calmon Viana).
+        </div>
+        <div id="carro" class="tabcontent">
+          <strong>PARTINDO DO CENTRO DE SÃO PAULO:</strong><br /><br />
+
+          Siga em direção à Praça Clóvis Beviláqua, na Sé.<br />
+          Continue pela Praça Clóvis Beviláqua e vire à esquerda na R. Anita Garibaldi.<br />
+          Faça uma curva suave à direita na Av. Rangel Pestana.<br />
+          Continue em direção ao Viaduto Vinte e Cinco de Março.<br />
+          Acesse a Av. Rangel Pestana e mantenha-se à direita para permanecer na Av. Rangel Pestana.<br />
+          Vire totalmente à esquerda no Largo da Concórdia, sentido viaduto do Gasômetro<br />
+          Subindo o viaduto do Gasômetro, vire a próxima rua a direita, que chegará ao estacionamento
+          Rua Correia de Andrade, n° 154<br /><br />
+
+          <a class="font-2 cor-azul1" href="/">Veja a rota no Google</a><br /><br />
+          <strong>PARTINDO DA AVENIDA ARICANDUVA, ZONA LESTE</strong><br /><br />
+
+          Pegue a Av. Aricanduva em direção à Rua Inácio Costa e continue para Praça Miguel Abrahão.<br />
+          Acesse a Av. Conde de Frontin/Av. Radial Leste, à esquerda.<br />
+          Continue na Av. Radial Leste e mantenha-se à esquerda para continuar em Av. Alcântara Machado/Av. Radial
+          Leste.<br />
+          Use a faixa da direita para virar levemente à direita em direção a R. Pires do Rio<br />
+          Em 308 metros vire à esquerda para chegar a Viaduto Bresser<br />
+          Em 950 metros vire à esquerda na Praça Dr. Clovis Arthur Rodrigues/R. Bresser<br />
+          Use a faixa da direita para continuar na R. Bresser e vire à direita na R. Cel. Antônio Marcelo<br />
+          Vire à direita na Rua Hipódromo e no final, vire à direita na Av. Rangel Pestana e logo em seguida, à esquerda
+          na R. Dr. Ricardo Gonçalves<br />
+          Acesse à direira a R Xavantes e em seguida vire à esquerda na R. Conselheiro Belisário<br />
+          Em 550 metros vire à esquerda na R. Barão de Ladário<br />
+          Vire a direita subindo o viaduto do Gasômetro e vire a direita, que chegará ao estacionamento<br />
+          Rua Correia de Andrade, n° 154<br /><br />
+
+          <a class="font-2 cor-azul1" href="/">Veja a rota no Google</a><br /><br />
+          <strong>ACESSO ATRAVÉS DA MARGINAL TIETÊ</strong><br /><br />
+
+          Acesse a Av. Marginal Tietê sentido Ponte Vila Guilherme. Pegue a saída em direção a Ponte Vila
+          Guilherme/Pari/Brás e
+          continue para Av. Carlos de Campos<br />
+          Em 790 metros, vire levemente à direita e acessar a R. Dr. Ornelas e continue à esquerda para a Praça Padre
+          Bento.<br />
+          Vire novamente à esquerda na Praça Padre Bento e em seguida à direita na R. Barão de Ladário<br />
+          Vire a direita subindo o viaduto do Gasômetro e vire a direita, que chegará ao estacionamento<br />
+          Rua Correia de Andrade, n° 154<br /><br />
+          <a class="font-2 cor-azul1" href="/">Veja a rota no Google</a><br /><br />
+        </div>
+      </div>
+      <div class="">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.7283371440385!2d-46.62005328473527!3d-23.542271384692334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58e2069e7ccd%3A0xb33aba8e4d687797!2sRua+do+Gas%C3%B4metro%2C+873+-+Br%C3%A1s%2C+S%C3%A3o+Paulo+-+SP%2C+03004-001!5e0!3m2!1sen!2sbr!4v1526514612482"
+          width="100%" height="100%" frameborder="0" style="border: 0px; pointer-events: none;"
+          allowfullscreen=""></iframe>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="fique-ligado" class=" cor-fundo-amarelo aqui-tem">
+    <span class="font-2 ">Fique ligado</span>
+  </section>
+
+  <section class="campanhas">
+    <span class="font-2 cor-azul1" style="font-size: 2rem; display: block;padding: 10px 10px 45px 10px;">Confira as
+      promoções, campanhas e novidades
+      da Feirinha da Concórdia!</span>
+
+    <div class="card-3">
+      <div class="">
+        <img src="./arquivos/campanhas/banner_ganhadores.jpg" alt="Campanha">
+        <span class="cor-azul1 font-2">Resultado da Promoção de Natal</span>
+      </div>
+      <div class="">
+        <img src="./arquivos/campanhas/banner_noticia.jpg" alt="Campanha">
+        <span class="cor-azul1 font-2">Resultado da Promoção de Natal</span>
+      </div>
+      <div class="">
+        <img src="./arquivos/campanhas/Noticia-2.jpg" alt="Campanha">
+        <span class="cor-azul1 font-2">Resultado da Promoção de Natal</span>
+      </div>
+    </div>
+
+  </section>
+
+  <section class="diz-ai"></section>
+
+  <section class="formulario"></section>
+
+  <section class="faca-parte"></section>
+
+  <section class="oportunidade"></section>
+
+  <section class="melhor-opcao"></section>
+
+  <section class="fale-com-equipe"></section>
+
+  <section class="receba-novidades cor-fundo-amarelo">
+    <div class="font-2 cor-azul1">
+      Receba as novidades da Feirinha em seu email
+    </div>
+    <div>
+
+    </div>
+  </section>
+  <section class="flex footer1 cor-fundo-azul2">
+    <div class="font-2">
+      <spam style="font-size: 1.1rem;">Feirinha da Concórdia</spam><br />
+      <spam>Rua do Gasômetro, n. 873</spam><br />
+      <spam>Brás - São Paulo - SP</spam> <br /><br /><br />
+      contato@feirinhadaconcordia.com.br<br /><br /><br />
+      <spam>Horário de funcionamento</spam>
+      <spam>segunda a sábado das 06h00 as 16h00</spam>
+    </div>
+    <div class="font-2">
+      <div class="footer1-contato">
+        <div><img src="arquivos/telefone.svg"></div>
+        <div>
+          <spam style="font-size: 1.1rem;">Fale com a gente</spam><br />
+          <spam>(11) 4200-2101</spam>
+        </div>
+      </div>
+      <br />
+      <br />
+      <div class="footer1-contato">
+        <div><img src="arquivos/whatsapp.png"></div>
+        <dvi>
+          <span style="font-size: 1.1rem; font-weight: 400;">Atendimento via WhatsApp</span><br />
+          <span style="font-size: 1rem; ">(11) 92005-6487</span>
+        </dvi>
+
+      </div>
+    </div>
+    <div class="font-2">
+      Siga-nos nas redes sociais <br /><br />
+    </div>
+  </section>
+  <section class="footer2 cor-fundo-verde">
+    <span>© 2021 Feirinha da Concórdia - Todos os direitos reservados Site desenvolvido por grupovab</span>
+  </section>
+
+  <!-- Para o carrossel de fotos -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+    $('.fotos-lista').slick({
+      autoplay: true,
+      arrows: false,
+      autoplaySpeed: 2000,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      infinite: true,
+    });
+  </script>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>

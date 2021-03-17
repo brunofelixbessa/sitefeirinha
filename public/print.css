@@ -1,0 +1,8 @@
+.header,
+.carrossel,
+.footer1,
+.footer2 {
+    display: none;
+    padding: 0;
+    margin: 0;
+}

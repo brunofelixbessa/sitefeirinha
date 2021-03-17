@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_flows "http://ns.adobe.com/Flows/1.0/">
+]>
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="130px" height="130px" viewBox="4296.944 2540.466 130 130"
+	 enable-background="new 4296.944 2540.466 130 130" xml:space="preserve">
+<defs>
+</defs>
+<g display="none">
+	<defs>
+		<path id="SVGID_5_" d="M863.765,12366.721c-1.657,0-2.986-1.34-2.986-3v-38.992c0-1.664,1.329-3.004,2.986-3.004h144.96
+			c1.662,0,3.006,1.34,3.006,3.004v38.992c0,1.66-1.344,3-3.006,3H863.765"/>
+	</defs>
+	<clipPath id="SVGID_9_" display="inline">
+		<use xlink:href="#SVGID_5_"  display="none" overflow="visible"/>
+	</clipPath>
+	<g clip-path="url(#SVGID_9_)">
+		<defs>
+			<rect id="SVGID_7_" x="0" width="8947.064" height="12761.611"/>
+		</defs>
+		<clipPath id="SVGID_11_" display="inline">
+			<use xlink:href="#SVGID_7_"  display="none" overflow="visible"/>
+		</clipPath>
+	</g>
+</g>
+<path fill="#28406F" d="M4361.941,2667.966c-35.005,0-62.497-27.501-62.497-62.504c0-34.994,27.492-62.496,62.497-62.496
+	c35.008,0,62.503,27.502,62.503,62.496C4424.444,2640.465,4396.949,2667.966,4361.941,2667.966"/>
+<polygon fill="#006DE4" points="4370.708,2583.833 4370.708,2619.687 4373.905,2619.687 4373.905,2648.128 4386.682,2648.128 
+	4386.682,2583.833 "/>
+<path fill="#006DE4" d="M4386.682,2582.107v-19.082c-5.26,0-9.54,4.28-9.54,9.541S4381.422,2582.107,4386.682,2582.107z"/>
+<path fill="#005EC2" d="M4396.223,2572.566c0-5.261-4.279-9.541-9.541-9.541v19.082
+	C4391.944,2582.107,4396.223,2577.828,4396.223,2572.566z"/>
+<path fill="#00DBE4" d="M4334.77,2582.107v-19.082c-5.262,0-9.541,4.28-9.541,9.541S4329.508,2582.107,4334.77,2582.107z"/>
+<path fill="#00CBD3" d="M4344.311,2572.566c0-5.261-4.28-9.541-9.541-9.541v19.082
+	C4340.031,2582.107,4344.311,2577.828,4344.311,2572.566z"/>
+<polygon fill="#00DBE4" points="4321.069,2583.917 4323.36,2597.666 4318.125,2628.458 4325.314,2628.458 4325.314,2648.128 
+	4335.252,2648.128 4335.252,2583.917 "/>
+<rect x="4357.306" y="2563.025" fill="#006DE4" width="6.876" height="85.103"/>
+<polygon fill="#00CBD3" points="4348.471,2583.917 4335.252,2583.917 4335.252,2648.128 4344.225,2648.128 4344.225,2628.458 
+	4351.415,2628.458 4346.18,2597.666 "/>
+<polygon fill="#005EC2" points="4386.682,2583.833 4386.682,2648.128 4399.459,2648.128 4399.459,2619.687 4402.657,2619.687 
+	4402.657,2583.833 "/>
+</svg>

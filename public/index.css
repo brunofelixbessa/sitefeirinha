@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Comfortaa:wght@300;400&display=swap");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+html {
+    /* a cada 1rem vai ser 10px */
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+body,
+html {
+    font-family: 'Asap', sans-serif, Helvetica;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    background: #FFF;
+    color: #666666;
+}
+
+/* img {
+    max-width: 100%;
+    display: block;
+} */
+
+/* .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+} */
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.flex-100 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.font-2 {
+    font-family: 'Comfortaa', cursive, Helvetica, sans-serif !important;
+}
+
+.font-just {
+    text-align: justify;
+}
+
+.cor-azul1 {
+    color: #2e88be;
+}
+
+.cor-fundo-azul2 {
+    background: #1a4170;
+}
+
+.cor-fundo-verde {
+    background: #bed732;
+}
+
+.cor-fundo-amarelo {
+    background: #f0e219;
+}
+
+.cor-fundo-laranja {
+    background: #dfad39;
+}
+
+.menu1 {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    width: 90%;
+    align-items: center;
+}
+
+.menu1 .container {
+    display: flex;
+    column-gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu1 img {
+    width: 240px;
+    margin-left: 20px;
+    padding: 40px 15px;
+}
+
+.redes {
+    display: flex;
+}
+
+.menu2 {
+    display: flex;
+}
+
+.menu2>a {
+    font-size: 2rem;
+    font-weight: 500;
+    padding: 22px;
+    color: #FFF !important;
+}
+
+.carrossel img {
+    width: 100%;
+    /* display: block; */
+}
+
+
+.social {
+    background-color: #bed732;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.social-ico {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+}
+
+.social-ico>image {
+    width: 35px;
+    height: 35px;
+}
+
+.conheca {
+    /* border: solid 1px red; */
+    padding: 70px;
+}
+
+.conheca>div {
+    flex: 1 1 200px;
+    margin: 60px;
+}
+
+
+.conheca-text {
+    font: normal 18px / 23px "Asap";
+    word-spacing: normal;
+}
+
+.diferenciais a {
+    color: inherit;
+    font-weight: 500;
+}
+
+.sacola-container {
+    background-color: #f3f4f4;
+    padding: 50px;
+}
+
+.sacola {
+    display: flex;
+    margin: 20px;
+}
+
+.melhor-do-bras {}
+
+.melhor-do-bras img {
+    width: 100%;
+}
+
+.cosumidora {
+    display: flex;
+    margin: auto;
+    margin-top: 50px;
+    margin-right: 50px;
+}
+
+.cosumidora>div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding: 50px;
+}
+
+.cosumidora img {
+    max-width: 30%;
+}
+
+.card-3 {
+    width: 100%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    column-gap: 20px;
+}
+
+.grid-bolas {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.card-centro {
+    flex: 1 1 33%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+}
+
+.boca-do-povo {
+    padding: 100px 100px 30px 100px;
+}
+
+.boca-do-povo1 {
+    flex: 1 1 70%;
+}
+
+.boca-do-povo2 {
+    flex: 1 1 30%;
+}
+
+
+.cards-povo {
+    background-color: #f3f4f4;
+    flex: 1 1 40%;
+    margin: 20px;
+    padding: 20px;
+}
+
+.aqui-tem {
+    padding: 70px;
+    color: #FFF;
+    justify-content: center;
+    align-content: center;
+    font-size: 3rem;
+    height: 200px;
+    background-image: url("arquivos/feirinha-da-concordia-grafismos-1.png");
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.segmentos {
+    justify-content: space-around !important;
+}
+
+.segmentos>div {
+    display: flex;
+    flex-direction: column;
+}
+
+.segmentos>div>spam {
+    font-size: 1.3rem;
+    color: #28406f;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.aviso-laranja {
+    background-color: #f2ddac;
+    padding: 30px;
+}
+
+.aviso-laranja>div {
+    text-align: justify;
+    flex: 1 1 50%;
+    padding: 20px;
+    font-size: 1.2rem;
+}
+
+.como-chegar {
+    padding: 40px;
+}
+
+.chegar-flex {
+    display: flex;
+}
+
+.chegar-flex>img {
+    margin-right: 20px;
+}
+
+.como-chegar-botoes {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.tablink {
+    background-color: #28406f;
+    color: #FFF;
+    flex: 1 1 auto;
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.tablink:hover {
+    background-color: #2e88be !important;
+}
+
+.como-chegar-cinsa {
+    background-color: #f3f4f4;
+}
+
+.como-chegar-cinsa>div {
+    text-align: justify;
+    flex: 1 1 45%;
+    padding: 60px;
+    font-size: 1.2rem;
+}
+
+.campanhas {
+    background-color: #f3f4f4;
+    padding: 50px;
+}
+
+.campanhas img {
+    display: block;
+    width: 100%;
+}
+
+.receba-novidades {
+    padding: 40px;
+    font-size: 1.4rem;
+}
+
+.footer1 {
+    color: #FFF;
+    padding: 20px 80px;
+}
+
+.footer1>div {
+    flex: 0 1 25%;
+    padding: 50px;
+}
+
+.footer1-contato {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: start !important;
+    align-content: center !important;
+}
+
+.footer1-contato>div>img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.footer2 {
+
+    text-align: center;
+    padding: 30px;
+    color: #FFF;
+}
+
+@media (max-width: 768px) {
+
+    .container {
+        align-content: center;
+    }
+
+    .conheca {
+        padding: 5px;
+    }
+
+    .conheca>div {
+        margin: 10px;
+    }
+
+    .cosumidora {
+        text-align: center;
+        align-items: center;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .um,
+    .dois,
+    .tres {
+        background-color: #1a4170;
+        height: 3px;
+        width: 100%;
+        margin: 6px auto;
+        transition-duration: 0.3s;
+    }
+
+    .menu-toggle {
+        width: 35px;
+        height: 30px;
+        margin-right: 20px;
+    }
+
+    /* :fullscreen */
+
+    header {
+        background-color: #FFF;
+    }
+
+    header.on {
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #fff;
+        width: 100vw;
+        height: 100vh;
+        z-index: 10;
+    }
+
+    header.on .menu1 .menu-toggle .um {
+        transform: rotate(45deg) translate(7px, 6px);
+    }
+
+    header.on .menu1 .menu-toggle .dois {
+        opacity: 0;
+    }
+
+    header.on .menu1 .menu-toggle .tres {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    header.on .menu2 {
+        left: 0px;
+    }
+
+    .menu1 {
+        justify-content: space-between;
+    }
+
+
+    .menu1 img {
+        padding: 10px;
+        margin-left: 0;
+    }
+
+    .menu1 .container {
+        display: none;
+    }
+
+    .menu2 {
+        position: absolute;
+        display: flex;
+        left: -250px;
+        height: 100vh;
+        width: 250px;
+        flex-direction: column;
+        transition-duration: 0.5s;
+    }
+
+    .centro {
+        flex: 1 1 auto;
+    }
+
+    .boca-do-povo {
+        padding: 20px;
+    }
+
+    .footer1 {
+        padding: 20px !important;
+    }
+
+    .footer1>div {
+        margin-bottom: 20px;
+        padding: 0px !important;
+        flex: 1 1 100% !important;
+        /* flex: 0 1 25%; */
+        /* padding: 50px; */
+    }
+}
+
+@media (max-width: 550px) {
+    html {
+        font-size: 50%;
+    }
+
+    .como-chegar-cinsa>div {
+        padding: 15px;
+    }
+
+    .sacola-container {
+        padding: 5px;
+    }
+
+    .fotos-lista img {
+        width: 100%;
+    }
+}
