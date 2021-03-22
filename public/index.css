@@ -27,30 +27,60 @@ html {
     color: #666666;
 }
 
-/* img {
-    max-width: 100%;
-    display: block;
-} */
-
-/* .container {
+img {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-} */
-
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: space-between;
+    max-width: 100%;
 }
 
-.flex-100 {
-    width: 100%;
+.flex-container-fluido {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: space-between;
+}
+
+.flex-container {
+    padding: 2%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.flex-10 {
+    flex: 1 1 10%;
+    padding: 2%;
+}
+
+.flex-20 {
+    flex: 1 1 20%;
+    padding: 2%;
+}
+
+.flex-30 {
+    flex: 1 1 30%;
+    padding: 2%;
+}
+
+.flex-40 {
+    flex: 1 1 40%;
+    padding: 2%;
+}
+
+.flex-50 {
+    flex: 1 1 50%;
+    padding: 2%;
+}
+
+.flex-60 {
+    flex: 1 1 60%;
+    padding: 2%;
+}
+
+.flex-70 {
+    flex: 1 1 70%;
+    padding: 2%;
 }
 
 .font-2 {
@@ -65,8 +95,13 @@ html {
     color: #2e88be;
 }
 
+.cor-fundo-cinza {
+    background-color: #f3f4f4;
+}
+
+
 .cor-fundo-azul2 {
-    background: #1a4170;
+    background: #28406f;
 }
 
 .cor-fundo-verde {
@@ -98,7 +133,6 @@ html {
 
 .menu1 img {
     width: 240px;
-    margin-left: 20px;
     padding: 40px 15px;
 }
 
@@ -117,13 +151,8 @@ html {
     color: #FFF !important;
 }
 
-.carrossel img {
-    width: 100%;
-    /* display: block; */
-}
-
-
 .social {
+    color: #FFF;
     background-color: #bed732;
     border-radius: 100%;
     width: 40px;
@@ -133,15 +162,34 @@ html {
     margin-left: 10px;
 }
 
-.social-ico {
-    width: 20px;
-    height: 20px;
-    align-self: center;
+.social-b {
+    color: #28406f !important;
+    background-color: #fff !important;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
 }
 
-.social-ico>image {
-    width: 35px;
-    height: 35px;
+.social-b :hover {
+    border: 2px solid #2e88be;
+    color: #FFF;
+    background-color: #2e88be;
+}
+
+.button__icon {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    fill: currentColor;
+}
+
+
+.social :hover {
+    background-color: #789329;
 }
 
 .conheca {
@@ -165,47 +213,14 @@ html {
     font-weight: 500;
 }
 
-.sacola-container {
-    background-color: #f3f4f4;
-    padding: 50px;
+#quadrados-coloridos img {
+    width: 150px;
+    height: 150px;
 }
 
 .sacola {
     display: flex;
     margin: 20px;
-}
-
-.melhor-do-bras {}
-
-.melhor-do-bras img {
-    width: 100%;
-}
-
-.cosumidora {
-    display: flex;
-    margin: auto;
-    margin-top: 50px;
-    margin-right: 50px;
-}
-
-.cosumidora>div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    padding: 50px;
-}
-
-.cosumidora img {
-    max-width: 30%;
-}
-
-.card-3 {
-    width: 100%;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    column-gap: 20px;
 }
 
 .grid-bolas {
@@ -225,35 +240,19 @@ html {
 }
 
 .boca-do-povo {
-    padding: 100px 100px 30px 100px;
+    padding: 30px;
 }
 
-.boca-do-povo1 {
-    flex: 1 1 70%;
+.icon_redondo {
+    width: 50px;
+    height: 50px;
 }
-
-.boca-do-povo2 {
-    flex: 1 1 30%;
-}
-
 
 .cards-povo {
     background-color: #f3f4f4;
     flex: 1 1 40%;
     margin: 20px;
     padding: 20px;
-}
-
-.aqui-tem {
-    padding: 70px;
-    color: #FFF;
-    justify-content: center;
-    align-content: center;
-    font-size: 3rem;
-    height: 200px;
-    background-image: url("arquivos/feirinha-da-concordia-grafismos-1.png");
-    background-repeat: no-repeat;
-    background-position: right;
 }
 
 .segmentos {
@@ -263,10 +262,16 @@ html {
 .segmentos>div {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.segmentos>div>spam {
-    font-size: 1.3rem;
+.segmentos div img {
+    width: 120px;
+    height: 120px;
+}
+
+.segmentos div span {
+    font-size: 2rem;
     color: #28406f;
     padding: 20px;
     margin-bottom: 30px;
@@ -274,14 +279,6 @@ html {
 
 .aviso-laranja {
     background-color: #f2ddac;
-    padding: 30px;
-}
-
-.aviso-laranja>div {
-    text-align: justify;
-    flex: 1 1 50%;
-    padding: 20px;
-    font-size: 1.2rem;
 }
 
 .como-chegar {
@@ -290,6 +287,7 @@ html {
 
 .chegar-flex {
     display: flex;
+    align-items: end;
 }
 
 .chegar-flex>img {
@@ -325,59 +323,157 @@ html {
     text-align: justify;
     flex: 1 1 45%;
     padding: 60px;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
 }
 
-.campanhas {
+.botao-azul {
+    background-color: #28406f;
+    color: #FFF;
+    padding: 20px 40px;
+    margin-bottom: 10px;
+}
+
+.botao-azul:hover {
+    background-color: #2e88be;
+}
+
+.caixa-aviso {
+    font-family: 'Comfortaa';
+    padding: 80px;
+    color: #FFF;
+    justify-content: center;
+    align-content: center;
+    font-size: 5rem;
+    height: 220px;
+    background-image: url("arquivos/feirinha-da-concordia-grafismos-1.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    margin-top: 20px;
+}
+
+
+.formulario {
+    background-color: #FFF;
+    /* padding: 60px 30px; */
+}
+
+.formulario .esquerda {
+    font-size: 1.8rem;
+    text-align: justify;
+    /* padding: 40px; */
+}
+
+.formulario .esquerda div {
+    margin-bottom: 15px;
+}
+
+.formulario .direita {
     background-color: #f3f4f4;
-    padding: 50px;
+    /* padding: 40px; */
 }
 
-.campanhas img {
-    display: block;
+.formulario .direita input,
+textarea {
+    margin-bottom: 10px;
     width: 100%;
+    padding: 10px;
+    border: 1px solid #d1d3d3;
 }
 
-.receba-novidades {
-    padding: 40px;
-    font-size: 1.4rem;
+.oportunidade {
+    background-color: #f3f4f4;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr 2fr);
 }
 
-.footer1 {
-    color: #FFF;
-    padding: 20px 80px;
+.oportunidade img {
+    max-width: 100%;
 }
 
-.footer1>div {
-    flex: 0 1 25%;
-    padding: 50px;
-}
-
-.footer1-contato {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: start !important;
-    align-content: center !important;
-}
-
-.footer1-contato>div>img {
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-}
-
-.footer2 {
-
-    text-align: center;
+.oportunidade .esquerda {
     padding: 30px;
-    color: #FFF;
+}
+
+#melhor-opcao div img {
+    width: 80px !important;
+    height: 80px !important;
+}
+
+.editwhats {
+    width: 80px;
+    height: 80px;
+
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 99999;
+    margin-right: 90%;
+}
+
+a[href="#top"] {
+    background-color: rgba(0, 0, 0, 0.24);
+    position: fixed;
+    top: 92%;
+    right: 10px;
+    width: 44px;
+    height: 44px;
+    display: none;
+    background-image: url("data:image/svg+xml,%3Csvg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' width='44px' height='44px' viewBox='0 0 44 44' enable-background='new 0 0 44 44' xml:space='preserve'%3E%3Cpath fill='white' d='M29.121,19.55l-6.29-6.196c-0.025-0.025-0.053-0.049-0.082-0.071c-0.012-0.011-0.024-0.02-0.038-0.03c-0.016-0.011-0.031-0.024-0.048-0.034c-0.017-0.011-0.032-0.02-0.048-0.03c-0.015-0.009-0.029-0.018-0.044-0.025c-0.017-0.009-0.034-0.017-0.051-0.024c-0.016-0.008-0.031-0.015-0.047-0.022c-0.016-0.006-0.033-0.012-0.049-0.018c-0.018-0.005-0.035-0.014-0.053-0.019c-0.017-0.005-0.034-0.008-0.05-0.013c-0.018-0.005-0.036-0.009-0.054-0.013c-0.02-0.003-0.039-0.006-0.059-0.008c-0.016-0.003-0.032-0.005-0.049-0.007c-0.073-0.007-0.146-0.007-0.218,0c-0.017,0.002-0.033,0.005-0.05,0.008c-0.02,0.002-0.038,0.005-0.058,0.009c-0.019,0.003-0.037,0.009-0.055,0.013c-0.016,0.005-0.033,0.008-0.05,0.013c-0.017,0.005-0.035,0.012-0.052,0.018c-0.017,0.006-0.033,0.012-0.049,0.019c-0.017,0.006-0.032,0.014-0.048,0.021c-0.017,0.008-0.034,0.016-0.051,0.024c-0.015,0.008-0.029,0.018-0.044,0.026c-0.015,0.008-0.031,0.018-0.048,0.029c-0.016,0.01-0.031,0.022-0.047,0.034c-0.014,0.01-0.027,0.019-0.04,0.028c-0.042,0.035-0.08,0.073-0.117,0.113c-0.013,0.011-0.026,0.021-0.037,0.033l-6.313,6.219c-0.433,0.428-0.434,1.12-0.003,1.544c0.432,0.426,1.131,0.424,1.564-0.002l4.495-4.426l-0.023,14.11c-0.001,0.603,0.493,1.092,1.104,1.09s1.107-0.49,1.109-1.095l0.023-14.108l4.403,4.334c0.432,0.426,1.133,0.424,1.565-0.003S29.553,19.975,29.121,19.55'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 800;
+
+    filter: alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    -webkit-transition: opacity 400ms ease;
+    transition: opacity 400ms ease;
+}
+
+a[href="#top"]:hover {
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.box-cookies.hide {
+    display: none !important;
+}
+
+.box-cookies {
+    position: fixed;
+    background: rgba(0, 0, 0, .9);
+    width: 100%;
+    z-index: 998;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-cookies .msg-cookies,
+.box-cookies .btn-cookies {
+    text-align: center;
+    padding: 25px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.box-cookies .btn-cookies {
+    background: #1e88e5;
+    cursor: pointer;
+    align-self: normal;
 }
 
 @media (max-width: 768px) {
 
-    .container {
-        align-content: center;
+
+    .flex-10,
+    .flex-20,
+    .flex-30,
+    .flex-40,
+    .flex-50,
+    .flex-60,
+    .flex-70 {
+        flex: 100%;
     }
 
     .conheca {
@@ -386,6 +482,14 @@ html {
 
     .conheca>div {
         margin: 10px;
+    }
+
+    .flex-container {
+        padding: 10px;
+    }
+
+    .box-cookies {
+        flex-direction: column;
     }
 
     .cosumidora {
@@ -465,14 +569,6 @@ html {
         width: 250px;
         flex-direction: column;
         transition-duration: 0.5s;
-    }
-
-    .centro {
-        flex: 1 1 auto;
-    }
-
-    .boca-do-povo {
-        padding: 20px;
     }
 
     .footer1 {

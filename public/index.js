@@ -9,6 +9,40 @@ menuSection.addEventListener("click", () => {
     show = !show;
 });
 
+//Cookes
+(() => {
+    if (!localStorage.pureJavaScriptCookies) {
+        document.querySelector(".box-cookies").classList.remove('hide');
+    }
+
+    const acceptCookies = () => {
+        document.querySelector(".box-cookies").classList.add('hide');
+        localStorage.setItem("pureJavaScriptCookies", "accept");
+    };
+
+    const btnCookies = document.querySelector(".btn-cookies");
+
+    btnCookies.addEventListener('click', acceptCookies);
+})();
+
+// Voltar ao TOPO
+$(document).ready(function () {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            $('a[href="#top"]').fadeIn();
+        } else {
+            $('a[href="#top"]').fadeOut();
+        }
+    });
+
+    $('a[href="#top"]').click(function () {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
+});
+
 // Firebase
 function storeData() {
 
